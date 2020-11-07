@@ -26,8 +26,8 @@ HANDLE GetMonitor() {
 	));
 
 	if (!GetPhysicalMonitorsFromHMONITOR(hMonitor, 
-										 NumberOfPhysicalMonitors, 
-										 PhysicalMonitors)) {
+					     NumberOfPhysicalMonitors, 
+					     PhysicalMonitors)) {
 		free(PhysicalMonitors);
 		return INVALID_HANDLE_VALUE;
 	}
