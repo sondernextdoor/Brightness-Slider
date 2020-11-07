@@ -110,14 +110,14 @@ LRESULT CALLBACK SliderObjectProcedure(HWND hWindow, UINT Message, WPARAM WP, LP
 			if (reinterpret_cast<HWND>(LP) == gSliderObject->Slider) {
 
 				SendMessageW(gSliderObject->Display, 
-							 WM_SETTEXT, 
-							 NULL, 
-							 (LPARAM)std::to_wstring(
-							 gSliderObject->Value = SendMessage(
-							 gSliderObject->Slider, 
-							 TBM_GETPOS, 
-							 0, 
-							 0)).c_str());
+					     WM_SETTEXT, 
+					     NULL, 
+					     (LPARAM)std::to_wstring(
+					     gSliderObject->Value = SendMessage(
+					     gSliderObject->Slider, 
+					     TBM_GETPOS, 
+					     0, 
+					     0)).c_str());
 
 				gSliderObject->OnValueChanged(gSliderObject.get());
 			}
