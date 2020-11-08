@@ -36,22 +36,41 @@ HANDLE GetMonitor() {
 
 
 COLORREF StringToColor(std::string SourceString) {
-	if (SourceString == "white" || SourceString == "White" || SourceString == "WHITE")
-		return RGB(255, 255, 255);
-	if (SourceString == "black" || SourceString == "Black" || SourceString == "BLACK")
-		return RGB(0, 0, 0);
-	if (SourceString == "red" || SourceString == "Red" || SourceString == "RED")
-		return RGB(255, 0, 0);
-	if (SourceString == "blue" || SourceString == "Blue" || SourceString == "BLUE")
-		return RGB(0, 0, 255);
-	if (SourceString == "green" || SourceString == "Green" || SourceString == "GREEN")
-		return RGB(0, 128, 0);
-	if (SourceString == "purple" || SourceString == "Purple" || SourceString == "PURPLE")
-		return RGB(100, 0, 135);
-	if (SourceString == "navy" || SourceString == "Navy" || SourceString == "NAVY")
-		return RGB(0, 0, 128);
-	if (SourceString == "maroon" || SourceString == "Maroon" || SourceString == "MAROON")
-		return RGB(128, 0, 0);
+	for (int i = 0; i < SourceString.length(); i++) {
+		SourceString[i] = std::tolower(SourceString[i]);
+	}
 
+	if (SourceString == "white") {
+		return RGB(255, 255, 255);
+	} 
+	
+	if (SourceString == "black") {
+		return RGB(0, 0, 0);
+	} 
+	
+	if (SourceString == "red") {
+		return RGB(255, 0, 0);
+	} 
+	
+	if (SourceString == "blue") {
+		return RGB(0, 0, 255);
+	} 
+	
+	if (SourceString == "green") {
+		return RGB(0, 128, 0);
+	} 
+	
+	if (SourceString == "purple") {
+		return RGB(100, 0, 135);
+	} 
+	
+	if (SourceString == "navy") {
+		return RGB(0, 0, 128);
+	} 
+	
+	if (SourceString == "maroon") {
+		return RGB(128, 0, 0);
+	}
+	
 	return RGB(255, 255, 255);
 }
