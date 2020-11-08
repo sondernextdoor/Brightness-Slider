@@ -1,6 +1,5 @@
 #pragma once
 #include "gui.h"
-#include <random>
 #include <physicalmonitorenumerationapi.h>
 #include <highlevelmonitorconfigurationapi.h>
 
